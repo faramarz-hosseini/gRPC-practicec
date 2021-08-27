@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+
+service Operations {
+  rpc DoOps(Number) returns (Result) {}
+}
+
+message Number {
+  int32 value = 1;
+}
+
+message Result {
+  int32 add = 1;
+  string subtract = 2;
+  int32 multiply = 3;
+  float division = 4;
+}
+
+
